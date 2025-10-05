@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 const service=require('../model/service')
 
 
-const PORT = 8080;
+const PORT =process.env.PORT|| 8080;
 
 
 
@@ -13,7 +13,7 @@ const PORT = 8080;
     
     console.log("db connected success");
      
-    app.listen(PORT, "0.0.0.0",() => {
+    app.listen(PORT,() => {
       console.log(`listening at port ${PORT}`);
     });
   })
